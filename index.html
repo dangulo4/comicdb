@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComicsDB</title>
+    <!-- Loading jQuery Mobile Library -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Start of hero screen -->
+    <section data-role="page" id="pgHero">
+      <header data-role="header">
+        <h1>Welcome ComicDb Manager</h1>
+      </header>
+      <article role="main" class="ui-content">
+        <h3>
+          Comic Database Manager Infrastructure for your comic book collection
+        </h3>
+        <p>
+          Collectors of all sizes from novice to comic book guro use Doleman's
+          software to manage their comic book collection. Register now by
+          clicking below...
+        </p>
+        <a
+          href="#pgRegister"
+          class="ui-shadow ui-btn ui-corner-all"
+          data-role="button"
+          >Start now</a
+        >
+        <a
+          href="#pgLogin"
+          class="ui-shadow ui-btn ui-corner-all"
+          data-role="button"
+          >Login</a
+        >
+      </article>
+    </section>
+    <!-- End of hero screen -->
+    <!-- Start of Register screen -->
+    <section data-role="page" id="pgRegister">
+      <header data-role="header">
+        <h1>Register</h1>
+      </header>
+      <form role="main" class="ui-content">
+        <div class="ui-field-contain">
+          <label for="textinput-1">Name</label>
+          <input
+            type="text"
+            name="textinput-1"
+            id="textinput-1"
+            placeholder="Enter your name..."
+            value=""
+          />
+        </div>
+        <div class="ui-field-contain">
+          <label for="textinput-1">Email</label>
+          <input
+            type="text"
+            name="textinput-1"
+            id="textinput-1"
+            placeholder="Enter your email..."
+            value=""
+          />
+        </div>
+        <div class="ui-field-contain">
+          <label for="textinput-1">Password</label>
+          <input
+            type="text"
+            name="textinput-1"
+            id="textinput-1"
+            placeholder="Enter your password..."
+            value=""
+          />
+        </div>
+        <button
+          class="ui=btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-check"
+        >
+          Register
+        </button>
+        <button
+          class="ui=btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-check"
+        >
+          Captcha goes here
+        </button>
+        <a
+          href="#pgLogin"
+          class="ui-shadow ui-brn ui-corner-all"
+          data-role="button"
+          >Already Registerd</a
+        >
+      </form>
+    </section>
+    <!-- End of Register screen -->
+    <!-- Start of Login screen -->
+    <section data-role="page" id="pgLogin">
+      <header data-role="header">
+        <h1>Sing In</h1>
+      </header>
+      <form role="main" class="ui-content">
+        <div class="ui-field-contain">
+          <label for="textinput-1">Email</label>
+          <input
+            type="text"
+            name="textinput-1"
+            id="textinput-1"
+            placeholder="Enter your email..."
+            value=""
+          />
+        </div>
+        <div class="ui-field-contain">
+          <label for="textinput-1">Password</label>
+          <input
+            type="text"
+            name="textinput-1"
+            id="textinput-1"
+            placeholder="Enter your password..."
+            value=""
+          />
+        </div>
+        <a
+          href="#pgHome"
+          class="ui-shadow ui-brn ui-corner-all"
+          data-role="button"
+          >Home</a
+        >
+      </form>
+    </section>
+    <!-- End of Login screen -->
+    <!-- Start of Home screen -->
+    <section data-role="page" id="pgHome">
+      <header data-role="header">
+        <h1>Home</h1>
+        <!-- Navbar -->
+        <nav data-role="navbar">
+          <ul>
+            <li>
+              <a
+                href="#pgHome"
+                data-icon="home"
+                class="ui-btn-active ui-state-persist"
+                >Home</a
+              >
+            </li>
+            <li><a href="#pgSaveComics" data-icon="heart">Save</a></li>
+            <li><a href="#pgViewComics" data-icon="grid">View</a></li>
+            <li><a href="#pgOptions" data-icon="bullets">Options</a></li>
+          </ul>
+        </nav>
+        <!-- End of Navbar -->
+      </header>
+      <article role="main" class="ui-content">
+        <h1>Your Content</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
+          doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
+          dignissimos illum at libero pariatur?
+        </p>
+      </article>
+      <!-- Start of Footer -->
+      <footer data-role="footer" data-position="fixed">
+        <h4>Doleman Copyright &copy 2022</h4>
+      </footer>
+      <!-- End of Footer -->
+    </section>
+    <!-- End of Home screen -->
+    <!-- Start of Save screen -->
+    <section data-role="page" id="pgSaveComics">
+      <header data-role="header">
+        <h1>Save Comics</h1>
+        <!-- Navbar -->
+        <nav data-role="navbar">
+          <ul>
+            <li>
+              <a href="#pgHome" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a
+                href="#pgSaveComics"
+                data-icon="heart"
+                class="ui-btn-active ui-state-persist"
+                >Save</a
+              >
+            </li>
+            <li><a href="#pgViewComics" data-icon="grid">View</a></li>
+            <li><a href="#pgOptions" data-icon="bullets">Options</a></li>
+          </ul>
+        </nav>
+        <!-- End of Navbar -->
+      </header>
+      <article role="main" class="ui-content">
+        <h1>Save Action Here</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
+          doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
+          dignissimos illum at libero pariatur?
+        </p>
+      </article>
+      <!-- Start of Footer -->
+      <footer data-role="footer" data-position="fixed">
+        <h4>Doleman Copyright &copy 2022</h4>
+      </footer>
+      <!-- End of Footer -->
+    </section>
+    <!-- End of Save screen -->
+    <!-- Start of View screen -->
+    <section data-role="page" id="pgViewComics">
+      <header data-role="header">
+        <h1>View Comics</h1>
+        <!-- Navbar -->
+        <nav data-role="navbar">
+          <ul>
+            <li>
+              <a href="#pgHome" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#pgSaveComics" data-icon="heart">Save</a>
+            </li>
+            <li>
+              <a
+                href="#pgViewComics"
+                data-icon="grid"
+                class="ui-btn-active ui-state-persist"
+                >View</a
+              >
+            </li>
+            <li><a href="#pgOptions" data-icon="bullets">Options</a></li>
+          </ul>
+        </nav>
+        <!-- End of Navbar -->
+      </header>
+      <article role="main" class="ui-content">
+        <h1>Action Views Here</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
+          doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
+          dignissimos illum at libero pariatur?
+        </p>
+      </article>
+      <!-- Start of Footer -->
+      <footer data-role="footer" data-position="fixed">
+        <h4>Doleman Copyright &copy 2022</h4>
+      </footer>
+      <!-- End of Footer -->
+    </section>
+    <!-- End of View screen -->
+    <!-- Start of Option -->
+    <section data-role="page" id="pgOptions">
+      <header data-role="header">
+        <h1>Options</h1>
+        <!-- Navbar -->
+        <nav data-role="navbar">
+          <ul>
+            <li>
+              <a href="#pgHome" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#pgSaveComics" data-icon="heart">Save</a>
+            </li>
+            <li>
+              <a href="#pgViewComics" data-icon="grid">View</a>
+            </li>
+            <li>
+              <a
+                href="#pgOptions"
+                data-icon="bullets"
+                class="ui-btn-active ui-state-persist"
+                >Options</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Navbar -->
+      </header>
+      <article role="main" class="ui-content">
+        <h1>Option Actions Here</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
+          doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
+          dignissimos illum at libero pariatur?
+        </p>
+      </article>
+      <!-- Start of Footer -->
+      <footer data-role="footer" data-position="fixed">
+        <h4>Doleman Copyright &copy 2022</h4>
+      </footer>
+      <!-- End of Footer -->
+    </section>
+    <!-- End of Option -->
+    <!-- Loading jQuery Mobile Library -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./app.js"></script>
+  </body>
+</html>
