@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ComicsDB</title>
+    <title>Amoeba Comics</title>
     <!-- Loading jQuery Mobile Library -->
     <link
       rel="stylesheet"
@@ -16,11 +16,12 @@
     <!-- Start of hero screen -->
     <section data-role="page" id="pgHero">
       <header data-role="header">
-        <h1>Welcome ComicDb Manager</h1>
+        <h1>Amoeba Comics</h1>
       </header>
       <article role="main" class="ui-content">
         <h3>
-          Comic Database Manager Infrastructure for your comic book collection
+          Comic Book Database Manager Infrastructure for your comic book
+          collection.
         </h3>
         <p>
           Collectors of all sizes from novice to comic book guro use Doleman's
@@ -40,6 +41,11 @@
           >Login</a
         >
       </article>
+      <!-- Start of Footer -->
+      <footer data-role="footer" data-position="fixed">
+        <h4>Doleman Copyright &copy 2022</h4>
+      </footer>
+      <!-- End of Footer -->
     </section>
     <!-- End of hero screen -->
     <!-- Start of Register screen -->
@@ -95,12 +101,17 @@
           >Already Registerd</a
         >
       </form>
+      <!-- Start of Footer -->
+      <footer data-role="footer" data-position="fixed">
+        <h4>Doleman Copyright &copy 2022</h4>
+      </footer>
+      <!-- End of Footer -->
     </section>
     <!-- End of Register screen -->
     <!-- Start of Login screen -->
     <section data-role="page" id="pgLogin">
       <header data-role="header">
-        <h1>Sing In</h1>
+        <h1>Sign In</h1>
       </header>
       <form role="main" class="ui-content">
         <div class="ui-field-contain">
@@ -130,6 +141,11 @@
           >Home</a
         >
       </form>
+      <!-- Start of Footer -->
+      <footer data-role="footer" data-position="fixed">
+        <h4>Doleman Copyright &copy 2022</h4>
+      </footer>
+      <!-- End of Footer -->
     </section>
     <!-- End of Login screen -->
     <!-- Start of Home screen -->
@@ -194,12 +210,14 @@
         <!-- End of Navbar -->
       </header>
       <article role="main" class="ui-content">
-        <h1>Save Action Here</h1>
+        <h1>Save Actions Here</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
           doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
           dignissimos illum at libero pariatur?
         </p>
+        <button class="ui-btn ui-btn-inline">Save</button>
+        <button class="ui-btn ui-btn-inline">Buy</button>
       </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
@@ -235,7 +253,7 @@
         <!-- End of Navbar -->
       </header>
       <article role="main" class="ui-content">
-        <h1>Action Views Here</h1>
+        <h1>View Actions Here</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
           doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
@@ -284,6 +302,12 @@
           doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
           dignissimos illum at libero pariatur?
         </p>
+        <a
+          href="#pgHero"
+          class="ui-shadow ui-brn ui-corner-all"
+          data-role="button"
+          >Log Out</a
+        >
       </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
@@ -292,6 +316,27 @@
       <!-- End of Footer -->
     </section>
     <!-- End of Option -->
+    <!-- Start of Page not found -->
+    <section data-role="page" id="pg404">
+      <article role="main" class="ui-content">
+        <header data-role="header">
+          <h1>404 Page Not Found</h1>
+        </header>
+        <h2>Oops something went wrong...</h2>
+        <a
+          href="#pgHome"
+          class="ui-shadow ui-brn ui-corner-all"
+          data-role="button"
+          >Return Back</a
+        >
+      </article>
+      <!-- Start of Footer -->
+      <footer data-role="footer" data-position="fixed">
+        <h4>Doleman Copyright &copy 2022</h4>
+      </footer>
+      <!-- End of Footer -->
+    </section>
+    <!-- End of Page not found -->
     <!-- Loading jQuery Mobile Library -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
