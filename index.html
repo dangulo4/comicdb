@@ -7,6 +7,14 @@
     <title>Amoeba Comics</title>
     <!-- Loading jQuery Mobile Library -->
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <!-- Add Themeroller colors  -->
+    <link rel="stylesheet" href="css/myColors.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/stylesheet.css"
+      charset="utf-8"
+    />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body>
@@ -16,6 +24,7 @@
         <h1>Amoeba Comics</h1>
       </header>
       <article role="main" class="ui-content">
+        <img src="./img/hero.png" alt="hero" style="width: 100%" />
         <h3>
           Comic Book Database Manager Infrastructure for your comic book
           collection.
@@ -25,18 +34,25 @@
           software to manage their comic book collection. Register now by
           clicking below...
         </p>
-        <a
-          href="#pgRegister"
-          class="ui-shadow ui-btn ui-corner-all"
-          data-role="button"
-          >Start now</a
-        >
-        <a
-          href="#pgLogin"
-          class="ui-shadow ui-btn ui-corner-all"
-          data-role="button"
-          >Login</a
-        >
+        <!-- JQM Grid -->
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <a
+              href="#pgRegister"
+              class="ui-shadow ui-btn ui-corner-all"
+              data-role="button"
+              >Start now</a
+            >
+          </div>
+          <div class="ui-block-b">
+            <a
+              href="#pgLogin"
+              class="ui-shadow ui-btn ui-corner-all"
+              data-role="button"
+              >Login</a
+            >
+          </div>
+        </div>
       </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
@@ -50,54 +66,52 @@
       <header data-role="header">
         <h1>Register</h1>
       </header>
-      <form role="main" class="ui-content">
-        <div class="ui-field-contain">
-          <label for="textinput-1">Name</label>
+      <article role="main" class="ui-content">
+        <!-- Form to create user credentials -->
+        <form id="fmSignUp">
+          <lable>Full Name:</lable>
           <input
             type="text"
-            name="textinput-1"
-            id="textinput-1"
-            placeholder="Enter your name..."
-            value=""
+            id="inNameSignUp"
+            placeholder="Enter your full name..."
+            autofocus
           />
-        </div>
-        <div class="ui-field-contain">
-          <label for="textinput-1">Email</label>
+          <label>Email:</label>
           <input
-            type="text"
-            name="textinput-1"
-            id="textinput-1"
-            placeholder="Enter your email..."
-            value=""
+            type="email"
+            id="inEmailSignUp"
+            placeholder="yourEmail@email.com"
           />
-        </div>
-        <div class="ui-field-contain">
-          <label for="textinput-1">Password</label>
+          <label>Password:</label>
           <input
-            type="text"
-            name="textinput-1"
-            id="textinput-1"
-            placeholder="Enter your password..."
-            value=""
+            type="password"
+            id="inPassword"
+            placeholder="Password123!..."
           />
-        </div>
-        <button
-          class="ui=btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-check"
-        >
-          Register
-        </button>
-        <button
-          class="ui=btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-check"
-        >
-          Captcha goes here
-        </button>
+          <label>Confirm Password:</label>
+          <input
+            type="password"
+            id="inPassword2"
+            placeholder="Password123!..."
+          />
+          <!-- JQM Grid -->
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+              <input type="reset" value="Clear" />
+            </div>
+            <div class="ui-block-b">
+              <input type="submit" value="Register" />
+            </div>
+          </div>
+        </form>
+        <!-- button to navigate back home if account already exists -->
         <a
           href="#pgLogin"
-          class="ui-shadow ui-brn ui-corner-all"
+          class="ui-btn ui-corner-all ui-shadow"
           data-role="button"
           >Already Registerd</a
         >
-      </form>
+      </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
         <h4>Doleman Copyright &copy 2022</h4>
@@ -108,36 +122,43 @@
     <!-- Start of Login screen -->
     <section data-role="page" id="pgLogin">
       <header data-role="header">
-        <h1>Sign In</h1>
+        <h1>Login</h1>
       </header>
-      <form role="main" class="ui-content">
-        <div class="ui-field-contain">
-          <label for="textinput-1">Email</label>
+      <article role="main" class="ui-content">
+        <!-- form to enter login credential for exisitng users -->
+        <form id="fmLogin">
+          <label>Email</label>
           <input
-            type="text"
-            name="textinput-1"
-            id="textinput-1"
-            placeholder="Enter your email..."
-            value=""
+            type="email"
+            id="inEmailLogin"
+            placeholder="yourEmail@mail.com"
+            autofocus
           />
-        </div>
-        <div class="ui-field-contain">
-          <label for="textinput-1">Password</label>
+          <label>Password</label>
           <input
-            type="text"
-            name="textinput-1"
-            id="textinput-1"
-            placeholder="Enter your password..."
-            value=""
+            type="password"
+            id="inPasswordLogin"
+            placeholder="Password123"
           />
-        </div>
+          <!-- JQM Grid -->
+          <fieldset class="ui-grid-a">
+            <div class="ui-block-a">
+              <input type="reset" value="Clear" />
+            </div>
+            <div class="ui-block-b">
+              <input type="submit" value="Log In" />
+            </div>
+          </fieldset>
+        </form>
         <a
-          href="#pgHome"
-          class="ui-shadow ui-brn ui-corner-all"
+          href="#pgRegister"
+          class="ui-btn ui-corner-all ui-shadow"
           data-role="button"
-          >Home</a
+          >Sign Up</a
         >
-      </form>
+        <!-- To do remove once JavaScript is added -->
+        <a href="#pgHome">Go Home</a>
+      </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
         <h4>Doleman Copyright &copy 2022</h4>
@@ -148,7 +169,15 @@
     <!-- Start of Home screen -->
     <section data-role="page" id="pgHome">
       <header data-role="header">
-        <h1>Home</h1>
+        <a
+          href="#pgOptions"
+          class="ui-btn-right"
+          data-icon="gear"
+          data-iconpos="notext"
+          data-transition="pop"
+          >Options...</a
+        >
+        <h1>Welcome Username</h1>
         <!-- Navbar -->
         <nav data-role="navbar">
           <ul>
@@ -160,20 +189,33 @@
                 >Home</a
               >
             </li>
-            <li><a href="#pgSaveComics" data-icon="heart">Save</a></li>
-            <li><a href="#pgViewComics" data-icon="grid">View</a></li>
-            <li><a href="#pgOptions" data-icon="bullets">Options</a></li>
+            <li>
+              <a href="#pgSaveComics" data-icon="heart" data-transition="slide"
+                >Save</a
+              >
+            </li>
+            <li>
+              <a href="#pgViewComics" data-icon="bars" data-transition="slide"
+                >View</a
+              >
+            </li>
           </ul>
         </nav>
         <!-- End of Navbar -->
       </header>
       <article role="main" class="ui-content">
-        <h1>Your Content</h1>
+        <h2>Ameoba Comics Craftsman Code:</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
-          doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
-          dignissimos illum at libero pariatur?
+          We hereby pledge ourselves in all data on comic book representation,
+          to be thorough and exact representation of comic book facts.
         </p>
+        <p>
+          You can rest assure that your data will be safe and foremost available
+          to not only collect but also connect with other comic book fanatics.
+        </p>
+        <!-- image here -->
+        <img src="./img/hole.png" alt="black hole" style="width: 100%" />
+        <p>Upcoming events: coming soon</p>
       </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
@@ -185,12 +227,22 @@
     <!-- Start of Save screen -->
     <section data-role="page" id="pgSaveComics">
       <header data-role="header">
+        <a
+          href="#pgOptions"
+          class="ui-btn-right"
+          data-icon="gear"
+          data-iconpos="notext"
+          data-transition="pop"
+          >Options...</a
+        >
         <h1>Save Comics</h1>
         <!-- Navbar -->
         <nav data-role="navbar">
           <ul>
             <li>
-              <a href="#pgHome" data-icon="home">Home</a>
+              <a href="#pgHome" data-icon="home" data-transition="slide"
+                >Home</a
+              >
             </li>
             <li>
               <a
@@ -200,21 +252,37 @@
                 >Save</a
               >
             </li>
-            <li><a href="#pgViewComics" data-icon="grid">View</a></li>
-            <li><a href="#pgOptions" data-icon="bullets">Options</a></li>
+            <li>
+              <a href="#pgViewComics" data-icon="bars" data-transition="slide"
+                >View</a
+              >
+            </li>
           </ul>
         </nav>
         <!-- End of Navbar -->
       </header>
       <article role="main" class="ui-content">
-        <h1>Save Actions Here</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
-          doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
-          dignissimos illum at libero pariatur?
-        </p>
-        <button class="ui-btn ui-btn-inline">Save</button>
-        <button class="ui-btn ui-btn-inline">Buy</button>
+        <form id="fmSaveComic">
+          <lable>Title:</lable>
+          <input type="text" required id="inTitleSave" autofocus />
+          <label>Number:</label>
+          <input type="number" required id="inNumberSave" />
+          <label>Year:</label>
+          <input type="number" required id="inYearSave" />
+          <label>Publisher:</label>
+          <input type="text" id="inPubSave" />
+          <label>Notes:</label>
+          <textarea id="inNotesSave" cols="30" rows="10"></textarea>
+          <!-- JQM Grid -->
+          <fieldset class="ui-grid-a">
+            <div class="ui-block-a">
+              <input type="reset" value="Clear" data-theme="a" />
+            </div>
+            <div class="ui-block-b">
+              <input type="submit" value="Save" data-theme="b" />
+            </div>
+          </fieldset>
+        </form>
       </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
@@ -226,36 +294,43 @@
     <!-- Start of View screen -->
     <section data-role="page" id="pgViewComics">
       <header data-role="header">
+        <a
+          href="#pgOptions"
+          class="ui-btn-right"
+          data-icon="gear"
+          data-iconpos="notext"
+          data-transition="pop"
+          >Options...</a
+        >
         <h1>View Comics</h1>
         <!-- Navbar -->
         <nav data-role="navbar">
           <ul>
             <li>
-              <a href="#pgHome" data-icon="home">Home</a>
+              <a href="#pgHome" data-icon="home" data-transition="slide"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="#pgSaveComics" data-icon="heart">Save</a>
+              <a href="#pgSaveComics" data-icon="heart" data-transition="slide"
+                >Save</a
+              >
             </li>
             <li>
               <a
                 href="#pgViewComics"
-                data-icon="grid"
+                data-icon="bars"
                 class="ui-btn-active ui-state-persist"
                 >View</a
               >
             </li>
-            <li><a href="#pgOptions" data-icon="bullets">Options</a></li>
           </ul>
         </nav>
         <!-- End of Navbar -->
       </header>
       <article role="main" class="ui-content">
         <h1>View Actions Here</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
-          doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
-          dignissimos illumr at libero pariatur?
-        </p>
+        <p>You have 20 new comics in your database...</p>
       </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
@@ -265,52 +340,21 @@
     </section>
     <!-- End of View screen -->
     <!-- Start of Option -->
-    <section data-role="page" id="pgOptions">
+    <section data-role="page" data-dialog="true" id="pgOptions">
       <header data-role="header">
         <h1>Options</h1>
-        <!-- Navbar -->
-        <nav data-role="navbar">
-          <ul>
-            <li>
-              <a href="#pgHome" data-icon="home">Home</a>
-            </li>
-            <li>
-              <a href="#pgSaveComics" data-icon="heart">Save</a>
-            </li>
-            <li>
-              <a href="#pgViewComics" data-icon="grid">View</a>
-            </li>
-            <li>
-              <a
-                href="#pgOptions"
-                data-icon="bullets"
-                class="ui-btn-active ui-state-persist"
-                >Options</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <!-- End of Navbar -->
       </header>
       <article role="main" class="ui-content">
-        <h1>Option Actions Here</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
-          doloribus sed est ipsum in id quisquam, soluta enim, molestias quos,
-          dignissimos illum at libero pariatur?
-        </p>
+        <h2>Option Actions Here</h2>
+        <!-- Basic button, To do with Javascrip for responsive actions -->
         <a
           href="#pgHero"
           class="ui-shadow ui-brn ui-corner-all"
+          id="btnLogOut"
           data-role="button"
           >Log Out</a
         >
       </article>
-      <!-- Start of Footer -->
-      <footer data-role="footer" data-position="fixed">
-        <h4>Doleman Copyright &copy 2022</h4>
-      </footer>
-      <!-- End of Footer -->
     </section>
     <!-- End of Option -->
     <!-- Start of Page not found -->
