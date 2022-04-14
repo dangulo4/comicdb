@@ -24,7 +24,7 @@
         <h1>Amoeba Comics</h1>
       </header>
       <article role="main" class="ui-content">
-        <img src="./img/hero.png" alt="hero" style="width: 100%" />
+        <p><img src="./img/hero.png" alt="hero" class="hero-Img" /></p>
         <h3>
           Comic Book Database Manager Infrastructure for your comic book
           collection.
@@ -214,7 +214,7 @@
           to not only collect but also connect with other comic book fanatics.
         </p>
         <!-- image here -->
-        <img src="./img/hole.png" alt="black hole" style="width: 100%" />
+        <p><img src="./img/hole.png" alt="black hole" class="home-Img" /></p>
         <p>Upcoming events: coming soon</p>
       </article>
       <!-- Start of Footer -->
@@ -263,16 +263,46 @@
       </header>
       <article role="main" class="ui-content">
         <form id="fmSaveComic">
-          <lable>Title:</lable>
-          <input type="text" required id="inTitleSave" autofocus />
-          <label>Number:</label>
-          <input type="number" required id="inNumberSave" />
-          <label>Year:</label>
-          <input type="number" required id="inYearSave" />
-          <label>Publisher:</label>
-          <input type="text" id="inPubSave" />
-          <label>Notes:</label>
-          <textarea id="inNotesSave" cols="30" rows="10"></textarea>
+          <label for="inTitleSave">Title:</label>
+          <input
+            name="inTitleSave"
+            type="text"
+            placeholder="Star Wars"
+            required
+            id="inTitleSave"
+            autofocus
+          />
+          <label for="inNumberSave">Number:</label>
+          <input
+            name="inNumberSave"
+            type="number"
+            placeholder="1"
+            required
+            id="inNumberSave"
+          />
+          <label for="inYearSave">Year:</label>
+          <input
+            name="inYearSave"
+            type="number"
+            placeholder="1977"
+            required
+            id="inYearSave"
+          />
+          <label for="inPubSave">Publisher:</label>
+          <input
+            name="inPubSave"
+            type="text"
+            placeholder="DC Comics"
+            id="inPubSave"
+          />
+          <label for="inNotesSave">Notes:</label>
+          <textarea
+            name="inNotesSave"
+            placeholder="First regular series"
+            id="inNotesSave"
+            cols="30"
+            rows="10"
+          ></textarea>
           <!-- JQM Grid -->
           <fieldset class="ui-grid-a">
             <div class="ui-block-a">
@@ -352,6 +382,7 @@
           class="ui-shadow ui-brn ui-corner-all"
           id="btnLogOut"
           data-role="button"
+          data-icon="power"
           >Log Out</a
         >
       </article>
