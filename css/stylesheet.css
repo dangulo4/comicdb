@@ -37,12 +37,26 @@ textarea {
   font-size: 1rem;
 }
 
+/* Container holding the image and the text */
+.ui-content {
+  position: relative;
+  text-align: center;
+  /* z-index: -10; */
+}
+
+/* Form holding the save lables */
+.fmSaveComic {
+  position: relative;
+  text-align: left;
+}
+
 /* Resize the hero Image using a class*/
 .hero-Img {
-  width: 20rem;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px #333;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
+
 /* Resize the home Image using a class*/
 .home-Img {
   width: 17rem;

@@ -24,7 +24,9 @@
         <h1>Amoeba Comics</h1>
       </header>
       <article role="main" class="ui-content">
-        <p><img src="./img/hero.png" alt="hero" class="hero-Img" /></p>
+        <p>
+          <img src="./img/hero.png" alt="hero" class="hero-Img" />
+        </p>
         <h3>
           Comic Book Database Manager Infrastructure for your comic book
           collection.
@@ -34,6 +36,7 @@
           software to manage their comic book collection. Register now by
           clicking below...
         </p>
+
         <!-- JQM Grid -->
         <div class="ui-grid-a">
           <div class="ui-block-a">
@@ -49,6 +52,7 @@
               href="#pgLogin"
               class="ui-shadow ui-btn ui-corner-all"
               data-role="button"
+              data-transition="flip"
               >Login</a
             >
           </div>
@@ -157,7 +161,7 @@
           >Sign Up</a
         >
         <!-- To do remove once JavaScript is added -->
-        <a href="#pgHome">Go Home</a>
+        <a href="#pgHome" data-transition="flip">Go Home</a>
       </article>
       <!-- Start of Footer -->
       <footer data-role="footer" data-position="fixed">
@@ -262,7 +266,7 @@
         <!-- End of Navbar -->
       </header>
       <article role="main" class="ui-content">
-        <form id="fmSaveComic">
+        <form id="fmSaveComic" class="fmSaveComic">
           <label for="inTitleSave">Title:</label>
           <input
             name="inTitleSave"
@@ -292,13 +296,13 @@
           <input
             name="inPubSave"
             type="text"
-            placeholder="DC Comics"
+            placeholder="Marvel Comics Group"
             id="inPubSave"
           />
           <label for="inNotesSave">Notes:</label>
           <textarea
             name="inNotesSave"
-            placeholder="First regular series"
+            placeholder="Printed by Marvel Comics in 1977, this is the 1st comic appearance of Star Wars and the ultra rare 35 Cent Price Variant!!!"
             id="inNotesSave"
             cols="30"
             rows="10"
@@ -376,6 +380,10 @@
       </header>
       <article role="main" class="ui-content">
         <h2>Option Actions Here</h2>
+        <p>
+          Collectors of all sizes from novice to comic book guro use Doleman's
+          software to manage their comic book collection.
+        </p>
         <!-- Basic button, To do with Javascrip for responsive actions -->
         <a
           href="#pgHero"
@@ -385,6 +393,7 @@
           data-icon="power"
           >Log Out</a
         >
+        <p>Design by Daniel Angulo dangulo4@gmail.com</p>
       </article>
     </section>
     <!-- End of Option -->
